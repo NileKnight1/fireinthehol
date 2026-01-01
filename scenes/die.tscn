@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0x0pvddci0w3"]
+
+[ext_resource type="Script" uid="uid://b6p5eiri3vb4c" path="res://scripts/die.gd" id="1_5x8g4"]
+
+[node name="Area2D" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_5x8g4")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

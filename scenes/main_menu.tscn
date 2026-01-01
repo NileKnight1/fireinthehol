@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://dja6slkny8yhd"]
+
+[ext_resource type="Script" uid="uid://d4hgukak7jjns" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_l6cm7")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 640.0
+color = Color(0.31957334, 0.4714169, 0.80513734, 1)
+
+[node name="start" type="Button" parent="."]
+layout_mode = 0
+offset_left = 383.99997
+offset_top = 64.0
+offset_right = 4223.999
+offset_bottom = 1504.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 700
+text = "Play"
+
+[node name="options" type="Button" parent="."]
+layout_mode = 0
+offset_left = 384.0
+offset_top = 232.0
+offset_right = 4223.9995
+offset_bottom = 1672.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 700
+disabled = true
+text = "Shop"
+
+[node name="quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 384.00003
+offset_top = 405.00003
+offset_right = 4223.9995
+offset_bottom = 1845.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 700
+text = "Quit
+"
+
+[connection signal="pressed" from="start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

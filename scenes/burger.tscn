@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://b144c01775dvc"]
+
+[ext_resource type="Script" uid="uid://cbtdy85kmk3yt" path="res://scripts/burger.gd" id="1_lp3hx"]
+[ext_resource type="Texture2D" uid="uid://dscsgixme3c8r" path="res://assets/tiles/food.png" id="1_nkn5y"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5n162"]
+atlas = ExtResource("1_nkn5y")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eu31t"]
+atlas = ExtResource("1_nkn5y")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvufg"]
+atlas = ExtResource("1_nkn5y")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xinqu"]
+atlas = ExtResource("1_nkn5y")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1l10p"]
+atlas = ExtResource("1_nkn5y")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ldck8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5n162")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eu31t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jvufg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xinqu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1l10p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kj4pt"]
+radius = 11.313708
+
+[node name="burger" type="Area2D"]
+collision_mask = 3
+script = ExtResource("1_lp3hx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ldck8")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 1)
+shape = SubResource("CircleShape2D_kj4pt")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://hn5tsxwsswjb"]
+
+[ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_hj7jr"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_ig7tw"]
+sky_material = SubResource("ProceduralSkyMaterial_7dm0k")
+
+[sub_resource type="Environment" id="Environment_0xm2m"]
+background_mode = 2
+sky = SubResource("Sky_ig7tw")
+tonemap_mode = 2
+
+[node name="Node3D" type="Node3D"]
+visible = false
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0xm2m")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.93748546, -0.24211767, 0.25, -0.32833233, -0.37709126, 0.86602545, -0.11540727, -0.8939694, -0.43301275, 2.4189734, 8.379571, -4.1897845)
+shadow_enabled = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(0.6605546, 0, 0, 0, 5.404498, 0, 0, 0, 3.9115217, 0, 2.6538398, 0)
+use_collision = true
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="CSGBox3D"]
+transform = Transform3D(2.6562047, 0, 0, 0, 0.5583727, 0, 0, 0, 0.48890007, 0, 0.1345317, 0)
+operation = 2
+cone = true
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="."]
+transform = Transform3D(15.762497, 0, 0, 0, 1, 0, 0, 0, 17.549538, 1.3865119, 0, 0)
+use_collision = true
+
+[node name="ProtoController" parent="." instance=ExtResource("1_hj7jr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.225084, 0.40966392, 2.5969017)
+can_sprint = true
+input_left = "move_left"
+input_right = "move_right"
+input_forward = "move_up"
+input_back = "move_down"
+input_jump = "jump"
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Node2D2" type="Node2D" parent="."]
+
+[node name="Node2D" type="Node2D" parent="Node2D2"]
+
+[node name="Node2D3" type="Node2D" parent="."]

@@ -1,0 +1,139 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvdjojwshsy8u"]
+
+[ext_resource type="Script" uid="uid://b4x311x6q8p5s" path="res://scenes/levels.gd" id="1_hcnff"]
+
+[node name="levels" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_hcnff")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 640.0
+color = Color(0.31957334, 0.4714169, 0.80513734, 1)
+
+[node name="level1" type="Button" parent="."]
+layout_mode = 0
+offset_left = 124.00001
+offset_top = 79.0
+offset_right = 1484.0
+offset_bottom = 1575.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 1000
+text = "1"
+
+[node name="level2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 315.99997
+offset_top = 79.0
+offset_right = 1676.0
+offset_bottom = 1575.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 1000
+disabled = true
+text = "2"
+
+[node name="level3" type="Button" parent="."]
+layout_mode = 0
+offset_left = 507.99994
+offset_top = 79.0
+offset_right = 1868.0
+offset_bottom = 1575.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 1000
+disabled = true
+text = "3"
+
+[node name="level4" type="Button" parent="."]
+layout_mode = 0
+offset_left = 699.99994
+offset_top = 79.0
+offset_right = 2060.0
+offset_bottom = 1575.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 1000
+disabled = true
+text = "4
+"
+
+[node name="level5" type="Button" parent="."]
+layout_mode = 0
+offset_left = 892.00006
+offset_top = 79.0
+offset_right = 2252.0
+offset_bottom = 1575.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 1000
+disabled = true
+text = "5
+"
+
+[node name="level6" type="Button" parent="."]
+layout_mode = 0
+offset_left = 124.00001
+offset_top = 321.99994
+offset_right = 1484.0
+offset_bottom = 1818.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 1000
+disabled = true
+text = "6"
+
+[node name="level7" type="Button" parent="."]
+layout_mode = 0
+offset_left = 315.99997
+offset_top = 321.99994
+offset_right = 1676.0
+offset_bottom = 1818.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 1000
+disabled = true
+text = "7"
+
+[node name="level8" type="Button" parent="."]
+layout_mode = 0
+offset_left = 507.99994
+offset_top = 321.99994
+offset_right = 1868.0
+offset_bottom = 1818.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 1000
+disabled = true
+text = "8"
+
+[node name="level9" type="Button" parent="."]
+layout_mode = 0
+offset_left = 699.99994
+offset_top = 321.99994
+offset_right = 2060.0
+offset_bottom = 1818.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 1000
+disabled = true
+text = "9"
+
+[node name="level10" type="Button" parent="."]
+layout_mode = 0
+offset_left = 892.00006
+offset_top = 321.99994
+offset_right = 2252.0
+offset_bottom = 1818.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 1000
+disabled = true
+text = "10"
+
+[connection signal="pressed" from="level1" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="level1" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]
+[connection signal="pressed" from="level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="level5" to="." method="_on_level_5_pressed"]
+[connection signal="pressed" from="level6" to="." method="_on_level_6_pressed"]
+[connection signal="pressed" from="level7" to="." method="_on_level_7_pressed"]
+[connection signal="pressed" from="level8" to="." method="_on_level_8_pressed"]
+[connection signal="pressed" from="level9" to="." method="_on_level_9_pressed"]
+[connection signal="pressed" from="level10" to="." method="_on_level_10_pressed"]

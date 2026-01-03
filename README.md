@@ -7,3 +7,6 @@
 ## Gameplay
 - Use A and D to move left and right, shift to sprint, space to jump and E to interact.
 - Mobile controls are in development.
+
+### Haackatime:
+- Project name is Nokia

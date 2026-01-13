@@ -8,5 +8,10 @@
 - Use A and D to move left and right, shift to sprint, space to jump and E to interact.
 - Mobile controls are in development.
 
+## Codes
+- Code 'admin' unlocks all levels
+- Code 'rora' converts difficulty to extreme
+- Code 'clear' returns you to beginning
+
 ### Haackatime:
 - Project name is Nokia
